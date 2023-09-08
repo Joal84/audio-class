@@ -1,7 +1,7 @@
 import css from "./second-page.module.css";
 import SoundsDetected from "./sounds-detected";
 import StopButton from "./stop-button.jsx";
-import Title from "./title.jsx";
+import Header from "./header.jsx";
 import DsSelector from "./ds-selector.jsx";
 
 export default function SecondPage() {
@@ -9,7 +9,7 @@ export default function SecondPage() {
     <div className={css.bg}>
       <div className={css.container}>
         <div className={css.title}>
-          <Title size="small" />
+          <Header size="small" />
         </div>
         <SoundsDetected />
         <div className={css.radar}>

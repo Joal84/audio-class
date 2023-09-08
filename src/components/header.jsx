@@ -1,8 +1,11 @@
-import css from "./title.module.css";
+import css from "./header.module.css";
 import PropTypes from "prop-types";
 
-function Title(props) {
+export default function Header(props) {
   const size = props.size;
+  Header.propTypes = {
+    size: PropTypes.string,
+  };
   return (
     <div className={css.main}>
       <div className={css[size]}>
@@ -14,7 +17,3 @@ function Title(props) {
     </div>
   );
 }
-Title.propTypes = {
-  size: PropTypes.string,
-};
-export default Title;
