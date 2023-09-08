@@ -1,5 +1,5 @@
 import Title from "./title.jsx";
-import StartRec from "./start-rec";
+import StartRec from "./start-rec.jsx";
 import css from "./first-page.module.css";
 import DsSelector from "./ds-selector.jsx";
 
