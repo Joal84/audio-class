@@ -1,7 +1,8 @@
 import css from "./title.module.css";
 import PropTypes from "prop-types";
 
-function Title({ size }) {
+function Title(props) {
+  const size = props.size;
   return (
     <div className={css.main}>
       <div className={css[size]}>
