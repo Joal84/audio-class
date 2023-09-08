@@ -1,7 +1,7 @@
-import Title from "./title";
+import Title from "./title.jsx";
 import StartRec from "./start-rec";
 import css from "./first-page.module.css";
-import DsSelector from "./ds-selector";
+import DsSelector from "./ds-selector.jsx";
 
 function FirstPage() {
   return (
