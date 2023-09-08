@@ -15,6 +15,6 @@ function Title(props) {
   );
 }
 Title.propTypes = {
-  size: PropTypes.object,
+  size: PropTypes.string,
 };
 export default Title;

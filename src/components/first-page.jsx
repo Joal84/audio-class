@@ -1,4 +1,4 @@
-//import Title from "./title.jsx";
+import Title from "./title.jsx";
 import StartRec from "./start-rec.jsx";
 import css from "./first-page.module.css";
 import DsSelector from "./ds-selector.jsx";
@@ -7,6 +7,7 @@ function FirstPage() {
   return (
     <div className={css.bg}>
       <div className={css.container}>
+        <Title size="big" />
         <div className={css.selector}>
           <DsSelector />
         </div>
