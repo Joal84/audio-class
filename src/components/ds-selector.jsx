@@ -1,8 +1,10 @@
 import { useState } from "react";
-import css from "./dsSelector.module.css";
+import css from "./ds-selector.module.css";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 function DsSelector(props) {
+  const info = props.info;
   const [selectedOption, setSelectedOption] = useState("us8k");
 
   const handleOptionClick = async (option) => {
@@ -34,7 +36,7 @@ function DsSelector(props) {
           ESC50
         </div>
       </div>
-      {props.info === "no" ? (
+      {info === "no" ? (
         ""
       ) : (
         <div className={css.descriptionContainer}>
@@ -60,4 +62,7 @@ function DsSelector(props) {
   );
 }
 
+DsSelector.propTypes = {
+  info: PropTypes.object,
+};
 export default DsSelector;

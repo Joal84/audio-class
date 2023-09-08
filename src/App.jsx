@@ -1,8 +1,8 @@
 //import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import FirstPage from "./components/FirstPage";
-import SecondPage from "./components/SecondPage";
+import FirstPage from "./components/first-page";
+import SecondPage from "./components/second-page";
 function App() {
   //const [data, setData] = useState({});
   /*

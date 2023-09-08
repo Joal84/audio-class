@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import css from "./soundsDetected.module.css";
+import { useState, useEffect } from "react";
+import css from "./sounds-detected.module.css";
 import axios from "axios";
 
 function SoundsDetected() {
@@ -7,7 +7,7 @@ function SoundsDetected() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   const fetchData = async () => {
     try {

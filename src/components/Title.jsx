@@ -1,18 +1,19 @@
-import React from "react";
 import css from "./title.module.css";
+import PropTypes from "prop-types";
 
-function Title(props) {
+function Title({ size }) {
   return (
     <div className={css.main}>
-      <div className={css[props.size]}>
+      <div className={css[size]}>
         Audio Classifier
-        <div className={css[props.size + "byName"]}>
-          PROJECT BY{" "}
-          <spam className={css[props.size + "name"]}>JOÃO PINHEIRO</spam>
+        <div className={css[size + "byName"]}>
+          PROJECT BY <spam className={css[size + "name"]}>JOÃO PINHEIRO</spam>
         </div>
       </div>
     </div>
   );
 }
-
+Title.propTypes = {
+  size: PropTypes.object,
+};
 export default Title;

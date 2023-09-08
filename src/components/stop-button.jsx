@@ -1,5 +1,5 @@
 import { useState } from "react";
-import css from "./stopButton.module.css";
+import css from "./stop-button.module.css";
 
 function StopButton() {
   const [status, setStatus] = useState(true);

@@ -1,9 +1,8 @@
-import React from "react";
-import css from "./secondPage.module.css";
-import SoundsDetected from "./SoundsDetected";
-import StopButton from "./StopButton";
-import Title from "./Title";
-import DsSelector from "./DsSelector";
+import css from "./second-page.module.css";
+import SoundsDetected from "./sounds-detected";
+import StopButton from "./stop-button";
+import Title from "./title";
+import DsSelector from "./ds-selector";
 
 export default function SecondPage() {
   return (

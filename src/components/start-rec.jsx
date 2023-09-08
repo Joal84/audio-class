@@ -1,4 +1,4 @@
-import css from "./startRec.module.css";
+import css from "./start-rec.module.css";
 import { useNavigate } from "react-router-dom";
 
 function StartRec() {
