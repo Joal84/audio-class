@@ -1,0 +1,24 @@
+.bg {
+  background-color: #5fd7c1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  margin: 200px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+}
+.selector {
+  margin-top: 100px;
+}
+.button {
+  position: absolute;
+  margin-top: 0px;
+  top: 60%;
+}

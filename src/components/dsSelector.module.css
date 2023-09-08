@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+}
+.title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 1.1rem;
+  text-transform: uppercase;
+}
+.option {
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 1.1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.divider {
+  font-size: 3.2rem;
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+
+.descriptionContainer {
+  background-color: #ccfff3;
+  width: 270px;
+  height: auto;
+  margin-left: 55px;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.8s all;
+}
+.textContainer {
+  display: flex;
+  margin-top: 10px;
+}
+.description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 23px;
+}
+.acitve {
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 1.1rem;
+  color: #ff1275;
+  text-transform: uppercase;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.4s all;
+}

@@ -1,0 +1,40 @@
+.main {
+  width: 1200px;
+  letter-spacing: 3.7rem;
+  font-weight: 600;
+  color: #4f5b5e;
+  text-transform: uppercase;
+}
+.big {
+  letter-spacing: 3.7rem;
+  font-weight: 600;
+  font-size: 9.6rem;
+}
+.bigbyName {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.4rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.bigname {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.small {
+  letter-spacing: 3rem;
+  font-weight: 600;
+  font-size: 3.6rem;
+}
+.smallbyName {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.smallname {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+}

@@ -1,0 +1,135 @@
+.sound0 {
+  font-size: 7.5rem;
+  list-style: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound1 {
+  font-size: 4.5rem;
+  list-style: none;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound2 {
+  font-size: 5.5rem;
+  list-style: none;
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  opacity: 90%;
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound3 {
+  font-size: 3.8rem;
+  list-style: none;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+
+.sound4 {
+  font-size: 8.8rem;
+  list-style: none;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound5 {
+  font-size: 4.8rem;
+  list-style: none;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound6 {
+  font-size: 5.8rem;
+  list-style: none;
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound7 {
+  font-size: 3.8rem;
+  list-style: none;
+  position: absolute;
+  top: 30%;
+  left: 87%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound8 {
+  font-size: 6.8rem;
+  list-style: none;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound9 {
+  font-size: 4.8rem;
+  list-style: none;
+  position: absolute;
+  top: 20%;
+  left: 86%;
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound10 {
+  font-size: 5.3rem;
+  list-style: none;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+.sound11 {
+  font-size: 2.8rem;
+  list-style: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+
+.fade-out-element {
+  /* Set initial opacity */
+  opacity: 1;
+  /* Define the animation for the fading effect */
+  animation: fadeOut 10s ease-in-out forwards;
+}
+
+/* Define the keyframes for the fading effect */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

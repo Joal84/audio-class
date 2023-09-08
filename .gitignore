@@ -1,0 +1,4 @@
+
+flask-server/pickles/*
+node_modules
+front-end/audio-classifier/flask-server/pickles

@@ -1,0 +1,101 @@
+.outerCircle {
+  /* 	design the circle */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 0 #aaa;
+  /* 	set its position as relative so that the inner green scanner can be positioned absolute */
+  position: relative;
+  transition: 0.5s all;
+}
+
+.greenScanner {
+  /* 	design the green scanner 40px smaller than the outerCircle */
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+
+  /* 	center this greenScanner inside the parent */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: 0.5s all;
+
+  /* 	set the background resembling a scanner */
+  background: conic-gradient(#6e7a7d, #4f5b5e);
+
+  /* 	define animation properties and set its easing to linear (default 'ease' doesn't look natural) */
+  animation: scan 4s infinite linear;
+}
+
+/* make waves using the pseudo-elements for semantic purposes */
+.outerCircle:before,
+.outerCircle:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  border: 5px solid #ffffff;
+  animation: ripple 2s infinite linear;
+  z-index: -1;
+}
+
+.outerCircle:after {
+  animation-delay: 0.5s;
+}
+
+@keyframes scan {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(8.5);
+  }
+}
+
+.stoppedOuter {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 0 #aaa;
+  /* 	set its position as relative so that the inner green scanner can be positioned absolute */
+  position: relative;
+  transition: 0.5s all;
+}
+.stoppedinner {
+  /* 	design the green scanner 40px smaller than the outerCircle */
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #7ebfa9;
+  /* 	center this greenScanner inside the parent */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+}
+
+.stoppedOuter:before,
+.stoppedOuter:after {
+  content: "";
+  width: 240px;
+  height: 240px;
+  transition: 0.5s all;
+}
+.label {
+  font-size: 3rem;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #414141;
+}
