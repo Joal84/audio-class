@@ -39,7 +39,6 @@ Data Sources: The classification model was trained using two datasets:
 - The audio data is reshaped into a 2D array.
 - Spectrogram extraction uses the Normalized Radial Diffusivity Transform (NRDT) algorithm to calculate diffusivity at different time delays.
 - Various parameters like flag, window (w), and channels are set for different spectrogram extraction approaches.
-![Spectograms](https://github.com/Joal84/audio-class/assets/97687297/afb262c0-cd08-4929-af92-da2b89c3e5cb)
 
 ## Convolutional Neural Network (CNN) Model
 - The CNN model uses the "Selu" activation function to mitigate vanishing and exploding gradient problems.
