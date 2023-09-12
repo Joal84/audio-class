@@ -6,11 +6,11 @@ Please note that this application is meant to run locally, as all audio capturin
 ## Getting Started
 ### Clone this repository to your local machine:
 ```
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/Joal84/audio-class.git
 ```
 ### Navigate to the project directory:
 ```
-cd your-repo
+cd audio-class
 ```
 ### Install the required dependencies:
 ```
