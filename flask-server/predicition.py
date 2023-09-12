@@ -14,7 +14,7 @@ RATE = 44100
 CHUNK_SIZE = RATE * 0.
 
 # Threshold parameters
-THRESHOLD = 0.02  # Adjust this threshold to your desired value
+THRESHOLD = 0.07  # Adjust this threshold to your desired value
 recording = False
 audio = pyaudio.PyAudio()
 audio_data = []
@@ -28,10 +28,7 @@ with open(config.p_path, "rb") as handle:
 
 df_esc50 = tmp.df_esc50
 df_us8k = tmp.df_us8k
-(train_images_us8k, test_images_us8k,
- train_labels_us8k, test_labels_us8k) = tmp.data8k
-(train_images_esc50, test_images_esc50,
- train_labels_esc50, test_labels_esc50) = tmp.dataesc50
+
 
 # Loading models
 model_us8k = load_model("best_us8k_model.ckpt")

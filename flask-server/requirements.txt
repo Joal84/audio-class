@@ -1,0 +1,7 @@
+python==3.10
+Flask==2.2.2
+Flask_Cors==4.0.0
+#keras==2.13.1
+numpy
+PyAudio
+tensorflow

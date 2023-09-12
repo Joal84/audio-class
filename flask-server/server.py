@@ -1,9 +1,8 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from predicition import init_audio_stream, start_audio_stream, stop_audio_stream, stop_audio_button, prediction
+from predicition import init_audio_stream
 from cfg import Config
 import cfg
-import pickle
 from keras.models import load_model
 import time
 
@@ -11,17 +10,8 @@ import time
 config = Config()
 cfg.init()
 
-with open(config.p_path, "rb") as handle:
-    tmp = pickle.load(handle)
 
 THRESHOLD = 0.03  # Adjust this threshold to your desired value
-
-df_esc50 = tmp.df_esc50
-df_us8k = tmp.df_us8k
-(train_images_us8k, test_images_us8k,
- train_labels_us8k, test_labels_us8k) = tmp.data8k
-(train_images_esc50, test_images_esc50,
- train_labels_esc50, test_labels_esc50) = tmp.dataesc50
 
 model_us8k = load_model("best_us8k_model.ckpt")
 model_esc50 = load_model("best_esc50_model.ckpt")
@@ -56,7 +46,7 @@ def get_predictions():
 def get_sound_list():
 
     # Implement a timeout or other logic to determine when to respond to the client.
-    timeout = 30  # Set an appropriate timeout value.
+    timeout = 5  # Set an appropriate timeout value.
     start_time = time.time()
 
     while True:
@@ -83,4 +73,4 @@ def get_selection():
 
 
 if __name__ == "__main__":
-    app.run(port=8000, debug=True)
+    app.run(port=8000)

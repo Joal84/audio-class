@@ -7,7 +7,7 @@ function SoundsDetected() {
 
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
   const fetchData = async () => {
     try {
@@ -16,7 +16,6 @@ function SoundsDetected() {
     } catch (error) {
       console.error(error);
     } finally {
-      // After each response, make the next request.
       fetchData();
     }
   };
