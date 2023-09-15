@@ -10,9 +10,6 @@ import time
 config = Config()
 cfg.init()
 
-
-THRESHOLD = 0.03  # Adjust this threshold to your desired value
-
 model_us8k = load_model("best_us8k_model.ckpt")
 model_esc50 = load_model("best_esc50_model.ckpt")
 
@@ -45,7 +42,6 @@ def get_predictions():
 @app.route("/sounds", methods=["GET"])
 def get_sound_list():
 
-    # Implement a timeout or other logic to determine when to respond to the client.
     timeout = 5  # Set an appropriate timeout value.
     start_time = time.time()
 

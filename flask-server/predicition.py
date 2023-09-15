@@ -14,7 +14,7 @@ RATE = 44100
 CHUNK_SIZE = RATE * 0.
 
 # Threshold parameters
-THRESHOLD = 0.07  # Adjust this threshold to your desired value
+THRESHOLD = 0.03  # Adjust this threshold to your desired value
 recording = False
 audio = pyaudio.PyAudio()
 audio_data = []
@@ -123,7 +123,7 @@ def prediction(audio_data):
     return category_value
 
 
-def audio_callback(in_data, frame_count, time_info, status):
+def audio_callback(in_data):
 
     # Convert audio data to numpy array
     audio_np = np.frombuffer(in_data, dtype=np.int16)
@@ -163,7 +163,7 @@ def init_audio_stream():
                         rate=44100,
                         input=True,
                         frames_per_buffer=1024,
-                        input_device_index=1,
+                        input_device_index=3,
                         stream_callback=audio_callback)
 
     return stream
