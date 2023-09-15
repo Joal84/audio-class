@@ -16,8 +16,9 @@ cd audio-class
 ```
 npm install
 ```
-### Go to /flask-server folder and install the required libraries and packages:
+### Navigate to /flask-server folder and install the required libraries and packages:
 ```
+cd flask-server
 pip install -r requirements.txt
 ```
 ### Start the application:
