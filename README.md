@@ -31,7 +31,7 @@ Purpose: This application is designed for environmental audio classification, wi
 Data Sources: The classification model was trained using two datasets:
 - ESC50: 50 classes, 40 recordings per class, each lasting 5 seconds.
 - us8K: 10 classes, 8732 total recordings, each with a duration of less than 4 seconds.
-- ![Screenshot of class distribution of both datasets.](https://private-user-images.githubusercontent.com/97687297/267327243-5daeec6d-9132-4360-bbaf-56a2ea922291.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE2OTQ1MjE5NDUsIm5iZiI6MTY5NDUyMTY0NSwicGF0aCI6Ii85NzY4NzI5Ny8yNjczMjcyNDMtNWRhZWVjNmQtOTEzMi00MzYwLWJiYWYtNTZhMmVhOTIyMjkxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzA5MTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMwOTEyVDEyMjcyNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU5OTYyMjFlNDAxMTgyYjdmYTIwZWE3ZmMzN2Q4ZWYwMjI1OWFiYmQ0ZmYxOTAyYTRjZDQ4MzAxOTdhZTJkZmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.6Bxns4FKcKA9WCy6QRZ-kgK-JxbuZh0-SiyIcgAEwTk)
+- ![Screenshot of class distribution of both datasets.](https://res.cloudinary.com/dug5nydjp/image/upload/v1694776652/sjsp0o7awll5r4dtq60q.png)
 
 ## Feature Extraction
 - The application uses the "Librosa" library to load all audio files.
@@ -40,6 +40,7 @@ Data Sources: The classification model was trained using two datasets:
 - The audio data is reshaped into a 2D array.
 - Spectrogram extraction uses the Normalized Radial Diffusivity Transform (NRDT) algorithm to calculate diffusivity at different time delays.
 - Various parameters like flag, window (w), and channels are set for different spectrogram extraction approaches.
+![Image of spectogram of a dog barking](https://res.cloudinary.com/dug5nydjp/image/upload/v1694776652/n3w6uhgets4ghyeaafkl.png)
 
 ## Convolutional Neural Network (CNN) Model
 - The CNN model uses the "Selu" activation function to mitigate vanishing and exploding gradient problems.
