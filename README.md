@@ -1,8 +1,8 @@
 # Environmental Audio Classification Application
 This application is designed for environmental audio classification and aims to assist individuals who are deaf or have severe hearing loss by focusing on environmental and urban sounds. To get started with this project, follow the steps below.
-
 Please note that this application is meant to run locally, as all audio capturing and analysis processes are performed on the server.
 
+[![Final video of fixing issues in your code in VS Code](https://img.youtube.com/vi/srpw3UPxvaw/maxresdefault.jpg)](https://www.youtube.com/watch?v=srpw3UPxvaw)
 ## Getting Started
 ### Clone this repository to your local machine:
 ```
