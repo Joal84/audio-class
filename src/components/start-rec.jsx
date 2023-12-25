@@ -15,7 +15,6 @@ function StartRec() {
       navigate("/listening");
     } catch (error) {
       console.error("Error starting server:", error);
-      // Handle any errors that occurred during the request
     }
   };
   return (
