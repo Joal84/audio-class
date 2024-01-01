@@ -4,6 +4,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FirstPage from "./components/first-page";
 import SecondPage from "./components/second-page";
 function App() {
+  //const [data, setData] = useState({});
+  /*
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/members")
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+      })
+      .then((data) => console.log(data));
+  }, []);
+*/
   return (
     <BrowserRouter>
       <Routes>
