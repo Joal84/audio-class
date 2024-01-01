@@ -20,14 +20,14 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 cfg.stream = init_audio_stream()
 
 
-@app.route("/start", methods=["GET", "POST"])
+@app.route("/start", methods=["POST"])
 def start_prediction():
 
     cfg.glob_start = True
     return jsonify({"status": "Started recording" if cfg.recording else "Stopped recording"})
 
 
-@app.route("/stop", methods=["GET", "POST"])
+@app.route("/stop", methods=["POST"])
 def stop_prediction():
     cfg.glob_start = False
 

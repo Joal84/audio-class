@@ -6,7 +6,10 @@ function SoundsDetected() {
   const [soundList, setSoundList] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    const interval = setInterval(() => {
+      fetchData();
+    }, 2000);
+    return () => clearInterval(interval);
   }, []);
 
   const fetchData = async () => {
@@ -15,8 +18,6 @@ function SoundsDetected() {
       setSoundList(response.data);
     } catch (error) {
       console.error(error);
-    } finally {
-      fetchData();
     }
   };
 
