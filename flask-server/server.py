@@ -10,9 +10,6 @@ import time
 config = Config()
 cfg.init()
 
-model_us8k = load_model("best_us8k_model.ckpt")
-model_esc50 = load_model("best_esc50_model.ckpt")
-
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -32,11 +29,6 @@ def stop_prediction():
     cfg.glob_start = False
 
     return jsonify({"status": "Stopped recording from stop page"})
-
-
-@app.route("/predictions", methods=["GET"])
-def get_predictions():
-    return jsonify({"predictions": cfg.sound_list})
 
 
 @app.route("/sounds", methods=["GET"])

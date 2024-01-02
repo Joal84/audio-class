@@ -11,13 +11,10 @@ import time
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 44100
-CHUNK_SIZE = RATE * 0.
 
 # Threshold parameters
 THRESHOLD = 0.03  # Adjust this threshold to your desired value
-recording = False
 audio = pyaudio.PyAudio()
-audio_data = []
 stream = None
 
 # Loading df"s
@@ -36,7 +33,6 @@ model_esc50 = load_model("best_esc50_model.ckpt")
 
 
 # Signal formating function
-
 def read_signal(writeFile):
 
     data_sample_average = 220500
@@ -58,9 +54,8 @@ def read_signal(writeFile):
 
     return newdata
 
+
 # Signal processing function to spectograms
-
-
 def NRDT(filename, w, flag, channels):
 
     signal = filename
@@ -83,7 +78,7 @@ def NRDT(filename, w, flag, channels):
 
     spectrum = np.zeros((m, spectrograms))
     for i in range(0, spectrograms):
-        values = matrix[i, :]  # the whole line
+        values = matrix[i, :]
         for k in range(0, m):
             delay = channels[k]  # delays
             t = np.array(range(delay, w-delay-1))
@@ -159,8 +154,8 @@ def audio_callback(in_data, frame_count, time_info, status):
 # Initialize PyAudio
 def init_audio_stream():
     stream = audio.open(format=FORMAT,
-                        channels=1,
-                        rate=44100,
+                        channels=CHANNELS,
+                        rate=RATE,
                         input=True,
                         frames_per_buffer=1024,
                         input_device_index=1,
@@ -169,31 +164,8 @@ def init_audio_stream():
     return stream
 
 
-# List available audio devices (microphones)
+# List available audio devices
 print("Available audio devices:")
 for i in range(audio.get_device_count()):
     device_info = audio.get_device_info_by_index(i)
     print(f"{i}: {device_info['name']}")
-
-
-def start_audio_stream():
-    cfg.stream.start_stream()
-
-
-def stop_audio_stream():
-    cfg.stream.stop_stream()
-    if len(cfg.audio_data) > 0:
-        pred = prediction(cfg.audio_data)
-    return pred
-
-
-def stop_audio_button():
-    cfg.stream.stop_stream()
-    if len(cfg.audio_data) > 0:
-        pred = prediction(cfg.audio_data)
-
-    return pred
-
-
-def is_audio_stream_active():
-    return cfg.stream.is_active()
